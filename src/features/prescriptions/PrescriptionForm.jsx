@@ -1,4 +1,3 @@
-// src/features/prescriptions/PrescriptionForm.jsx
 import React, { useState, useEffect } from 'react';
 
 const PrescriptionForm = ({ onSubmit, initialData }) => {
@@ -14,7 +13,7 @@ const PrescriptionForm = ({ onSubmit, initialData }) => {
     if (initialData) {
       setForm({
         ...initialData,
-        alertType: initialData.alertType || 'notification' // fallback if missing
+        alertType: initialData.alertType || 'notification' 
       });
     }
   }, [initialData]);

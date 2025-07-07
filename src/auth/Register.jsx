@@ -112,7 +112,6 @@ const Signup = () => {
   );
 };
 
-// Reusable Input with password toggle
 const Input = ({ label, name, type = "text", value, onChange }) => {
   const [show, setShow] = useState(false);
   const isPassword = type === "password";

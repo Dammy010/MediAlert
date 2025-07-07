@@ -16,9 +16,8 @@ const EditPrescriptionPage = () => {
     try {
       const data = JSON.parse(stored);
       if (data && typeof data === 'object') {
-        // Fallback if alertType is missing
         if (!data.alertType) {
-          data.alertType = 'notification'; // default
+          data.alertType = 'notification'; 
         }
         setInitialData(data);
       } else {

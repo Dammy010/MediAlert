@@ -9,7 +9,6 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
-  // Load saved form if remembered
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem("med_login_form"));
     if (saved) {
@@ -18,7 +17,6 @@ const Login = () => {
     }
   }, []);
 
-  // Save or remove remembered form
   useEffect(() => {
     if (rememberMe) {
       localStorage.setItem(
@@ -61,7 +59,6 @@ const Login = () => {
         return;
       }
 
-      // ✅ Save correct login state
       localStorage.setItem("med_logged_in", "true");
       localStorage.setItem("med_current_user", JSON.stringify(user));
 
@@ -77,7 +74,6 @@ const Login = () => {
         <h2 className="text-2xl font-bold text-center text-blue-700 mb-6">Login</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Email or Phone */}
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Email or Phone
@@ -93,7 +89,6 @@ const Login = () => {
             />
           </div>
 
-          {/* Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700">Password</label>
             <div className="relative">
@@ -116,7 +111,6 @@ const Login = () => {
             </div>
           </div>
 
-          {/* Remember Me & Forgot */}
           <div className="flex items-center justify-between text-sm">
             <label className="flex items-center gap-2">
               <input
@@ -135,7 +129,6 @@ const Login = () => {
             </Link>
           </div>
 
-          {/* Submit */}
           <button
             type="submit"
             disabled={loading}
@@ -146,7 +139,6 @@ const Login = () => {
             {loading ? "Logging in..." : "Login"}
           </button>
 
-          {/* Register Link */}
           <p className="text-sm text-center text-gray-600">
             Don't have an account?{" "}
             <Link to="/register" className="text-blue-600 hover:underline">
