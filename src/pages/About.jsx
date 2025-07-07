@@ -39,9 +39,6 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-12 text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} MediAlert. All rights reserved.
-        </div>
       </div>
     </div>
   );
